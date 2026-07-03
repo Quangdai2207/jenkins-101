@@ -4,11 +4,10 @@ pipeline {
             label 'agent-alpine-python3'
             }
       }
-      
     triggers {
         pollSCM '*/1 * * * *'
     }
-
+    
     stages {
         stage('Build') {
             steps {
@@ -22,7 +21,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff..
+                echo "doing test stuff.."
                 '''
             }
         }
